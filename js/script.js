@@ -2,6 +2,7 @@ var curPosition = 50;
 var curSlide = 2;
 var hoverHeader = false;
 var topShow = 800;
+var winHeight = $(window).height();
 
 function changeTitle(){
 	switch(curPosition){
@@ -16,6 +17,7 @@ function changeTitle(){
 }
 
 $(document).ready(function(){
+	$("header").css({"height" : winHeight});
 	$(".left-arrow").on("click",function(){
 		if(curPosition == 0){
 			curPosition = 100;
