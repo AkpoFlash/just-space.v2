@@ -68,7 +68,7 @@ $(document).ready(function(){
 			$("#up").css({"transform": "translateX(0)"});
 		}
 		else{
-			$("#up").css({"transform": "translateX(100px)"});
+			$("#up").css({"transform": "translateX(150px)"});
 		}
 		
 		if(winScroll >= $(".counting").offset().top - winHeight + winHeight/2){
@@ -76,6 +76,16 @@ $(document).ready(function(){
 			changeNumber(".clients-count", "clientsCount", "clientsMax", 30);
 			changeNumber(".certificates-count", "certificatesCount", "certificatesMax", 30);
 			$("footer").css({"display" : "block"}); // fix show footer when load page
+		}
+
+		if(winScroll > $(".blogs").offset().top - winHeight){
+			var offset = winScroll - $(".blogs").offset().top + winHeight / 3;
+			$(".blog-1").css({
+				"transform": "translate("+ Math.min(0,offset) + "px," + -Math.min(0,offset)/2 + "px)" 
+			});
+			$(".blog-3").css({
+				"transform": "translate("+ -Math.min(0,offset) + "px," + -Math.min(0,offset)/2 + "px)" 
+			});
 		}
 	});
 });
