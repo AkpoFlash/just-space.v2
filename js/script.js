@@ -75,7 +75,7 @@ $(document).ready(function(){
 			changeNumber(".projects-count", "projectsCount", "projectsMax", 30);
 			changeNumber(".clients-count", "clientsCount", "clientsMax", 30);
 			changeNumber(".certificates-count", "certificatesCount", "certificatesMax", 30);
-			$("footer").css({"display" : "block"}); // fix show footer when load page
+			$("footer").css({"display" : "flex"}); // fix show footer when load page
 		}
 
 		if(winScroll > $(".blogs").offset().top - winHeight){

@@ -150,7 +150,7 @@ main{
 	position: relative;
 	z-index: 2;
 	background: @white;
-	margin-bottom: 200px;
+	margin-bottom: 220px;
 }
 
 article{
@@ -198,43 +198,42 @@ article{
 }
 
 footer{
-	background-color: @black-light;
-	display: none;
-	position: fixed;
-	z-index: -1;
-	bottom: 0;
-	color: @white;
 	width: 100%;
-	table{
-		width: 100%;
-		height: 200px;
-		text-align: center;
-		tr{
-			width: 100%;
-			td{
-				width: 33%;
-				padding: 20px 15px;
-				a{
-					color: @white;
-					text-decoration: none;
-					&:hover{
-						text-decoration: underline;
-					}
-				}
-				.fa-phone-square{
-					color: @orange;
-					font-size: 36px;
-				}
-				.fa-envelope-o{
-					color: @orange;
-					font-size: 36px;
-				}
-				.fa-map-marker{
-					color: @orange;
-					font-size: 36px;
-				}	
-			}
+	background: #000;
+	position: fixed;
+	bottom: 0;
+	z-index: -1;
+	color: #fff;
+	padding: 40px 0;
+	line-height: 30px;
+	display: none;
+	justify-content: center;
+	h3{
+		font-size: 24px;
+	}
+	ul{
+		list-style: none;
+		margin: 0;
+		padding: 0;
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+		&:hover{
+			text-decoration: underline;
 		}
+	}
+	.social{
+		width: 25%;	
+		text-align: left;
+	}
+	.link{
+		width: 25%;	
+		text-align: center;	
+	}
+	.contacts{
+		width: 25%;	
+		text-align: right;
 	}
 }
 
