@@ -301,10 +301,10 @@ footer{
 .counting{
 	position: relative;
 	z-index: 2;
-	background-color: @orange;
+	background-color: @gray;
 	width: 100%;
 	height: 200px;
-	color: @white;
+	color: @black;
 	text-align: center;
 	font-size: 30px;
 	padding: 15px 20px;
@@ -327,3 +327,35 @@ footer{
 	display: flex;
 	justify-content: space-around;
 }
+
+.order{
+	widows: 100%;
+	input{
+		background-color: @white;
+		width: 60%;
+		max-width: 600px;
+		height: 30px;
+		margin-bottom: 20px;
+	}
+	textarea{
+		width: 60%;
+		max-width: 600px;
+		margin-bottom: 20px;
+		height: 100px;
+	}
+	input[type="submit"]{
+		width: 30%;
+		max-width: 300px;
+		height: 50px;
+		font-size: 18px;
+		background-color: @white;
+		border-color: @black;
+		color: @black;
+		transition: all .3s ease-in-out;
+		&:hover{
+			background-color: @black;
+			color: @white;
+		}
+	}
+}
+

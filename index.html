@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
 	<meta charset="UTF-8">
 	<title>Just Space</title>
@@ -121,6 +121,19 @@
 			<img src="img/3.png" alt="">
 			<img src="img/4.png" alt="">
 			<img src="img/5.png" alt="">
+		</article>
+		<article>
+			<h2>Форма заказа</h2>
+			<hr>
+			<p>
+				Ниже вы можете заполнить форму заказа, указав свое имя, почту и телефонный номер. Также желательно описать необходимую вам услугу.
+			</p>
+			<hr>
+		</article>
+		<article class="order">
+			<form method="POST">
+				<input name="FIO" type="text" placeholder="ФИО" required></input><br><input name="email" type="email" placeholder="Email" required></input><br><input name="tel" type="tel" placeholder="Телефон" required></input><br><textarea placeholder="Краткое описание задачи"></textarea><br><input type="submit" value="Отправить заявку"></input>
+			</form>
 		</article>
 	</main>
 	<footer>
