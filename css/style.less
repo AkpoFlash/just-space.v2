@@ -170,11 +170,11 @@ article{
 
 footer{
 	width: 100%;
-	background: #000;
+	background: @black;
 	position: fixed;
 	bottom: 0;
 	z-index: -1;
-	color: #fff;
+	color: @white;
 	padding: 40px 0;
 	line-height: 30px;
 	display: none;
@@ -188,11 +188,15 @@ footer{
 		padding: 0;
 	}
 	a{
-		color: #fff;
+		color: @white;
 		text-decoration: none;
 		&:hover{
 			text-decoration: underline;
 		}
+	}
+	.fa{
+		font-size: 18px;
+		color: @orange;
 	}
 	.social{
 		width: 25%;	
@@ -205,6 +209,92 @@ footer{
 	.contacts{
 		width: 25%;	
 		text-align: right;
+		a,span{
+			color: @orange;
+		}
+	}
+}
+
+.services{
+	width: 100%;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+	margin: 0 auto 100px;
+	.service{
+		width: 25%;
+		position: relative;
+		margin: 0 10px;
+		background: @white;
+		color: @white;
+		background-size: cover;
+		.promo-title{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			transition: all .3s ease-in-out;
+			background-color: rgba(0,0,0,0.4);
+			font-size: 36px;
+		}
+		.promo-text{
+			width: 100%;
+			display: flex;
+			justify-content: center;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			padding-top: 20px;
+			transition: all .3s ease-in-out;
+			background-color: rgba(0,0,0,0.4);
+			a{
+				margin: 0 auto;
+				position: absolute;
+				left: 20px;
+				right: 20px;
+				bottom: 20px;
+				display: block;
+				text-decoration: none;
+				text-align: center;
+				color: @white;
+				margin-top: 30px;
+				font-size: 28px;
+				border: 1px solid @white;
+				padding: 10px 15px;
+				transition: all .3s ease-in-out;
+				&:hover{
+					color: @black;
+					background-color: @white;
+				}
+			}
+		}
+		&:hover{
+			.promo-title{
+				opacity: 0;
+			}
+			.promo-text{
+				opacity: 1;
+			}
+		}
+	}
+	.design{
+		background-image: url("../img/homepage11.jpg");
+		background-position: right;
+	}
+	.develop{
+		background-image: url("../img/mac-headphone.jpg");
+		background-position: center;
+	}
+	.seo{
+		background-image: url("../img/sample-slider-2.jpg");
+		background-position: center;
 	}
 }
 
