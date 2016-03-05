@@ -2,22 +2,22 @@
 <html lang="ru">
 <head>
 	<meta charset="UTF-8">
-	<title>Just Space</title>
+	<title>Создаем сайты Infinit</title>
 	<link rel="stylesheet" href="css/style.min.css">
 	<link rel="stylesheet" href="css/font-awesome-4.5.0/css/font-awesome.css">
 </head>
 <body>
 	<header>
 		<div class="logo">
-			<i class="fa fa-cube"></i> Infinito
+			<i class="fa fa-cube"></i> Infinit
 		</div>
-		<nav>
-			<li><a href="#">Услуги</a></li>
+		<nav class="menu">
+			<li><a href="#service">Услуги</a></li>
 			<li><a href="#">Наши работы</a></li>
-			<li><a href="#">Клиенты</a></li>
-			<li><a href="#">О нас</a></li>
+			<li><a href="#blog">Блог</a></li>
+			<li><a href="#review">Отзывы клиентов</a></li>
 			<li><a href="#">Контакты</a></li>
-			<li><a href="#">Оформить заказ</a></li>
+			<li><a href="#order">Оформить заказ</a></li>
 		</nav>
 		<div class="text text-1">
  			Разрабатываем уникальный дизайн
@@ -44,7 +44,7 @@
 		<div class="right-arrow">&gt;</div>
 	</header>
 	<main>
-		<article>
+		<article id="service">
 			<h2>Наши услуги</h2>
 			<hr>
 			<p>
@@ -54,40 +54,63 @@
 		</article>
 		<article class="services">
 			<div class="service design">
-				<div class="promo-title">
-					Дизайн сайта
-				</div>
-				<div class="promo-text">
-					Вам необходимо создать уникальный дизайн сайта или воспользоваться шаблонным, но подстроенным точно под вас решением? Тогда вы пришли по адресу.
-					<a href="#">
-						Подробнее
-					</a>
+				<div class="promo">
+					<div class="promo-title">
+						Дизайн сайта
+					</div>
+					<div class="promo-text">
+						Вам необходимо создать уникальный дизайн сайта или воспользоваться шаблонным, но подстроенным точно под вас решением? Тогда вы пришли по адресу.
+						<a href="#">
+							Подробнее
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="service develop">
-				<div class="promo-title">
-					Создание сайта
-				</div>
-				<div class="promo-text">
-					Занимаемся созданием сайтов любой сложности: корпоративные сайты, сайты-визитки, интернет-магазины, лендинги и другие виды сайтов.
-					<a href="#">
-						Подробнее
-					</a>
+				<div class="promo">
+					<div class="promo-title">
+						Создание сайта
+					</div>
+					<div class="promo-text">
+						Занимаемся созданием сайтов любой сложности: корпоративные сайты, сайты-визитки, интернет-магазины, лендинги и другие виды сайтов.
+						<a href="#">
+							Подробнее
+						</a>
+					</div>
 				</div>
 			</div>
 			<div class="service seo">
-				<div class="promo-title">
-					Продвижение сайта
-				</div>
-				<div class="promo-text">
-					Поможем поднять сайт на первые позиции поисковой выдачи. Контекстная реклама, SEO продвижение, продвижение в социальных сетях и многое другое.
-					<a href="#">
-						Подробнее
-					</a>
+				<div class="promo">
+					<div class="promo-title">
+						Продвижение сайта
+					</div>
+					<div class="promo-text">
+						Поможем поднять сайт на первые позиции поисковой выдачи. Контекстная реклама, SEO продвижение, продвижение в социальных сетях и многое другое.
+						<a href="#">
+							Подробнее
+						</a>
+					</div>
 				</div>
 			</div>
 		</article>
-		<article>
+		<table class="counting">
+			<tr>
+				<td><i class="fa fa-briefcase"></i></td>
+				<td><i class="fa fa-users"></i></td>
+				<td><i class="fa fa-certificate"></i></td>
+			</tr>
+			<tr>
+				<td>Проектов</td>
+				<td>Клиентов</td>
+				<td>Сертификатов</td>
+			</tr>
+			<tr>
+				<td class="projects-count">0</td>
+				<td class="clients-count">0</td>
+				<td class="certificates-count">0</td>
+			</tr>
+		</table>
+		<article id="blog">
 			<h2>Читайте наш блог</h2>
 			<hr>
 			<p>
@@ -121,42 +144,24 @@
 				<a href="#">Читать</a>
 			</div>
 		</article>
-		<table class="counting">
-			<tr>
-				<td><i class="fa fa-briefcase"></i></td>
-				<td><i class="fa fa-users"></i></td>
-				<td><i class="fa fa-certificate"></i></td>
-			</tr>
-			<tr>
-				<td>Проектов</td>
-				<td>Клиентов</td>
-				<td>Сертификатов</td>
-			</tr>
-			<tr>
-				<td class="projects-count">0</td>
-				<td class="clients-count">0</td>
-				<td class="certificates-count">0</td>
-			</tr>
-		</table>
-		<article>
+		<article id="review">
 			<h2>Отзывы наших клиентов</h2>
 		</article>
 		<article class="reviews">
-			<div class="review">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam!
-				<img src="img/testimonial1.jpg">
-				<span class="signature">Anna Suka</span>
+			<div class="review review-1">
+				Долго ходили по разным студиям, не могли найти подходящий дизайн для нашего сайта
+				<span class="signature">Артем Горелов</span>
 			</div>
-			<div class="review">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam!
-				<img src="img/testimonial2.jpg">
-				<span class="signature">Anna Suka</span>
+			<div class="review review-2">
+				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure eius, pariatur doloribus autem voluptas officia voluptatem quibusdam! Molestiae quod optio excepturi eum nihil tempore aperiam, rem aspernatur deleniti vero fugit, placeat, voluptate a quasi laboriosam, error dolorum ullam omnis nesciunt veritatis? Blanditiis similique adipisci voluptatibus aliquid quisquam iusto eos reprehenderit.
+				<span class="signature">Владимир Светличный</span>
 			</div>
-			<div class="review">
+			<div class="review review-3">
 				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, nam!
-				<img src="img/testimonial3.jpg">
-				<span class="signature">Anna Suka</span>
+				<span class="signature">Макс Берг</span>
 			</div>
+			<div class="left-arrow">&lt;</div>
+			<div class="right-arrow">&gt;</div>
 		</article>	
 		<article class="clients">
 			<img src="img/1.png" alt="">
@@ -165,7 +170,7 @@
 			<img src="img/4.png" alt="">
 			<img src="img/5.png" alt="">
 		</article>
-		<article>
+		<article id="order">
 			<h2>Форма заказа</h2>
 			<hr>
 			<p>
@@ -186,14 +191,6 @@
 				<li><i class="fa fa-vk"></i> <a href="https://vk.com/spacedev">Вконтакте</a></li>
 				<li><i class="fa fa-twitter"></i> <a href="https://twitter.com/Space_Develop">Twitter</a></li>
 				<li><i class="fa fa-facebook"></i> <a href="https://www.facebook.com/groups/931393063615918/">Facebook</a></li>
-			</ul>
-		</div>
-		<div class="link">
-			<h3></h3>
-			<ul>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
-				<li><a href="#"></a></li>
 			</ul>
 		</div>
 		<div class="contacts">

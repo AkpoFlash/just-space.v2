@@ -4,6 +4,7 @@ var hoverHeader = false;
 var topShow = 800;
 var winHeight = $(window).height();
 var winScroll = $(this).scrollTop();
+var countReview = 2;
 var counting = {
 	projectsCount : 0,
 	projectsMax : 22,
@@ -36,8 +37,10 @@ function changeNumber(className, count, max, interval){
 
 $(document).ready(function(){
 	$("header").css({"height" : winHeight});
-	$(".left-arrow").on("click",function(){
-		if(curPosition == 0){
+	$(".review-2").css({"transform":"translateX(0)"});
+	$("header .left-arrow").on("click",function(){
+		if(curPosition
+		 == 0){
 			curPosition = 100;
 		}
 		else{
@@ -46,7 +49,7 @@ $(document).ready(function(){
 		$("header").css({"backgroundPosition":curPosition+"%"});
 		changeTitle();
 	});
-	$(".right-arrow").on("click",function(){
+	$("header .right-arrow").on("click",function(){
 		if(curPosition == 100){
 			curPosition = 0;
 		}
@@ -55,6 +58,23 @@ $(document).ready(function(){
 		}
 		$("header").css({"backgroundPosition":curPosition+"%"});
 		changeTitle();
+	});
+
+	$(".reviews .left-arrow").on("click",function(){
+		$(".review-"+countReview).css({"transform":"translateX(500%)"});
+		countReview--;
+		if(countReview < 1){
+			countReview = 3;
+		}
+		$(".review-"+countReview).css({"transform":"translateX(0)"});
+	});
+	$(".reviews .right-arrow").on("click",function(){
+		$(".review-"+countReview).css({"transform":"translateX(-500%)"});
+		countReview++;
+		if(countReview > 3){
+			countReview = 1;
+		}
+		$(".review-"+countReview).css({"transform":"translateX(0)"});
 	});
 
 	$("#up").on("click", function(e){
@@ -88,4 +108,13 @@ $(document).ready(function(){
 			});
 		}
 	});
+
+	//smooth scroll 
+	$(".menu a[href*='#']").on("click", function(e){ 
+		var anchor = $(this); 
+		$('html, body').stop().animate({ 
+			scrollTop: $(anchor.attr('href')).offset().top - 90 
+		}, 1000); 
+		e.preventDefault(); 
+	}); 
 });
