@@ -2,6 +2,7 @@
 @black-light: #272727;
 @white: #fff;
 @pishachio: #DBDB63;
+@blue: #0095b6;
 @gray: #ddd;
 
 body{
@@ -521,3 +522,31 @@ footer{
 	}
 }
 
+.skills{
+	background-color: @black;
+	padding: 10px 15px;
+	display: flex;
+	justify-content: center;
+	height: 150px;		
+	color: @white;
+	.skill{
+		opacity: 0;
+		position: relative;
+		width: 25%;
+		transition: all .3s ease-in-out;
+		.percent{
+			position: absolute;
+			top: 60px;
+			left: 25px;
+		}
+		.skill-text{
+			position: absolute;
+			top: 60px;
+			left: 100px;	
+		}
+		canvas{
+			width: 100%;
+			height: 100%;
+		}
+	}
+}

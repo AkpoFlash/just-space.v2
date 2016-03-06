@@ -35,12 +35,24 @@ function changeNumber(className, count, max, interval){
 	},interval);	
 }
 
+function drawCircle(id,x,y,r,start,end,flag,color){
+	var canvas = document.getElementById(id);
+	var obCanvas = canvas.getContext("2d");
+
+	obCanvas.beginPath();
+	obCanvas.moveTo(x,y);
+	obCanvas.lineTo(x,y-r);
+	obCanvas.arc(x,y,r,start,end,flag);
+	obCanvas.fillStyle = color;
+	obCanvas.fill();
+}
+
 $(document).ready(function(){
 	$("header").css({"height" : winHeight});
+		
 	$(".review-2").css({"transform":"translateX(0)"});
 	$("header .left-arrow").on("click",function(){
-		if(curPosition
-		 == 0){
+		if(curPosition == 0){
 			curPosition = 100;
 		}
 		else{
@@ -91,6 +103,25 @@ $(document).ready(function(){
 			$("#up").css({"transform": "translateX(150px)"});
 		}
 		
+		if(winScroll >= $(".skills").offset().top - winHeight + winHeight/2){
+			$(".skill").css({"opacity":"1"});
+			drawCircle("design",55,90,50,Math.PI/2,Math.PI*1.5,true,"green");
+			drawCircle("design",55,90,50,Math.PI/2,Math.PI*1.25,false,"green");
+			drawCircle("design",55,90,37,0,Math.PI*2,false,"black");
+
+			drawCircle("develop",55,90,50,Math.PI/2,Math.PI*1.5,true,"red");
+			drawCircle("develop",55,90,50,Math.PI/2,Math.PI*1.35,false,"red");
+			drawCircle("develop",55,90,37,0,Math.PI*2,false,"black");
+
+			drawCircle("seo",55,90,50,Math.PI/2,Math.PI*1.5,true,"orange");
+			drawCircle("seo",55,90,50,Math.PI/2,Math.PI*1.1,false,"orange");
+			drawCircle("seo",55,90,37,0,Math.PI*2,false,"black");
+
+			drawCircle("other",55,90,50,Math.PI/2,Math.PI*1.5,true,"blue");
+			drawCircle("other",55,90,50,Math.PI/2,Math.PI*1.1,false,"blue");
+			drawCircle("other",55,90,37,0,Math.PI*2,false,"black");
+		}
+
 		if(winScroll >= $(".counting").offset().top - winHeight + winHeight/2){
 			changeNumber(".projects-count", "projectsCount", "projectsMax", 30);
 			changeNumber(".clients-count", "clientsCount", "clientsMax", 30);
