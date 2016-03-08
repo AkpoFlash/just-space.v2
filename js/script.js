@@ -149,7 +149,7 @@ $(document).ready(function(){
 			$("#up").css({"transform": "translateX(150px)"});
 		}
 		
-		if(winScroll >= $(".skills").offset().top - winHeight + winHeight/2){			
+		if((winScroll >= $(".skills").offset().top - winHeight + winHeight/2) && (diagramSkills["designCount"] == 0)){			
 			delay(".skill-1",{"transform":"translateX(0)"},0);
 			delay(".skill-2",{"transform":"translateX(0)"},300);
 			delay(".skill-3",{"transform":"translateX(0)"},600);
@@ -167,7 +167,7 @@ $(document).ready(function(){
 			changeNumber(".skill-3 .percent", percentSkills, "seoCount", "seoEnd", 30, "%");
 		}
 
-		if(winScroll >= $(".counting").offset().top - winHeight + winHeight/2){
+		if((winScroll >= $(".counting").offset().top - winHeight + winHeight/2) && (counting["projectsCount"] == 0)){
 			changeNumber(".projects-count", counting, "projectsCount", "projectsMax", 30);
 			changeNumber(".clients-count", counting, "clientsCount", "clientsMax", 30);
 			changeNumber(".certificates-count", counting, "certificatesCount", "certificatesMax", 30);
